@@ -1,35 +1,37 @@
 @reference "tailwindcss";
 
 .lua-gigante {
-    width: 600px;
-    height: 600px;
-    border-radius: 50%;
-    
-    /* FUNDO 100% TRANSPARENTE: A garantia de que a bola inteira nunca será pintada */
-    background: transparent;
+  width: 900px;
+  height: 900px;
+  border-radius: 50%;
+  margin-right: 220px;
+  margin-bottom: 50px;
 
-    /* 
+  /* FUNDO 100% TRANSPARENTE: A garantia de que a bola inteira nunca será pintada */
+  background: transparent;
+
+  /* 
       A PINTURA DA LUA COM SOMBRAS INTERNAS 3D:
       Construímos a lua em 3 camadas de luz, da mais externa até a mais interna.
       Como a maior sombra só avança uns 150px pra dentro, os outros 450px do círculo ficam invisíveis!
     */
-    box-shadow: 
-        /* 1. A linha branca/brilhante bem na pontinha externa (fina e afiada) */
-        inset 15px -15px 20px -5px rgba(255, 240, 255, 0.9),
-        
-        /* 2. O roxo vibrante que se espalha um pouco mais */
-        inset 45px -45px 50px -10px rgba(150, 40, 255, 0.9),
-        
-        /* 3. A sombra roxa escura que morre suavemente no escuro do espaço */
-        inset 100px -100px 70px -20px rgba(30, 0, 70, 0.9);
+  box-shadow:
+    /* 1. A linha branca/brilhante bem na pontinha externa (fina e afiada) */
+    inset 15px -15px 20px -5px rgb(115, 108, 228),
 
-    /* 
+    /* 2. O roxo vibrante que se espalha um pouco mais */
+    inset 45px -45px 50px -10px rgba(44, 40, 255, 0.9),
+
+    /* 3. A sombra roxa escura que morre suavemente no escuro do espaço */
+    inset 100px -100px 70px -20px rgba(30, 0, 70, 0.9);
+
+  /* 
       O BRILHO EXTERNO (Aura da lua):
       Usamos drop-shadow em vez de box-shadow normal, porque o drop-shadow abraça 
       o formato da pintura (a foice), em vez de desenhar um círculo ao redor da div!
     */
-    filter: drop-shadow(-10px 10px 30px rgba(150, 40, 255, 0.6)) drop-shadow(-20px 20px 60px rgba(80, 10, 180, 0.3));
+  filter: drop-shadow(-10px 10px 30px rgba(54, 40, 255, 0.6)) drop-shadow(-20px 20px 60px rgba(80, 10, 180, 0.3));
 
-    -webkit-mask-image: none;
-    mask-image: none;
+  -webkit-mask-image: none;
+  mask-image: none;
 }

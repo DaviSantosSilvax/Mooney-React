@@ -1,8 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800;900&family=Poppins:wght@400;600;700&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=BJCree:wght@400;500;600;700&family=M+PLUS+U:wght@100..900&family=Momo+Trust+Display&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
 @import "tailwindcss";
 
 @theme {
+    --font-orbitron: 'Orbitron', sans-serif;
     --font-bjcree: BJCree, sans-serif;
     --font-poppins: 'Poppins', sans-serif;
+}
+
+/* Remove o fundo branco/azul do preenchimento automático do navegador */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-text-fill-color: #ffffff !important;
+    transition: background-color 999999s ease-in-out 0s;
+    caret-color: #ffffff;
 }
