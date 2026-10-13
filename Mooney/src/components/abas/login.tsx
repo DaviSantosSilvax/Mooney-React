@@ -55,12 +55,12 @@ export default function Login() {
     return (
         <div className="min-h-screen w-full relative overflow-hidden bg-[linear-gradient(0deg,#2727E7_20%,#000854,rgba(43,0,84,1))] flex flex-col items-center justify-center">
             <Estrelas
-                density={1}         // <-- MENOS ESTRELAS (padrão era 1, 0.3 deixa bem mais limpo e sutil)
-                glowIntensity={0.1}   // <-- Estrelas mais finas e elegantes
+                density={1}
+                glowIntensity={0.1}
                 rotationSpeed={0.025}
-                mouseInteraction={false}
+
                 mouseRepulsion={false}
-                speed={0.001}           // <-- Velocidade mais suave e calma
+                speed={0.001}
             />
 
 
